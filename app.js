@@ -9,6 +9,14 @@ let activeSlideIdx = 0;
 
 sidebar.style.top = `-${(SlidesCount - 1) * 100}vh`;
 
+document.addEventListener("keydown",(event)=>{
+    if(event.key === "ArrowUp") {
+        changeSlide("up");
+    } else if(event.key === "ArrowDown") {
+        changeSlide("down");
+    }
+});
+
 upBtn.addEventListener("click", () => {
     changeSlide("up");
 });
